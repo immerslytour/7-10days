@@ -190,7 +190,7 @@ body {
 .hero-ctas {
   display: flex; flex-wrap: wrap;
   align-items: center; gap: 1rem;
-  margin-bottom: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: 1.5rem;
 }
 .btn-primary {
   background: var(--gold);
@@ -214,6 +214,33 @@ body {
   transition: color 0.15s;
 }
 .btn-text:hover { color: var(--white); }
+
+/* guarantee banner */
+.hero-guarantee {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  background: var(--gold-bg);
+  border: 1px solid var(--gold-mid);
+  border-radius: 8px;
+  padding: 0.75rem 1.125rem;
+  margin-bottom: 1.75rem;
+  max-width: 520px;
+}
+.hero-guarantee .g-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.hero-guarantee p {
+  font-size: 0.875rem;
+  color: var(--white);
+  line-height: 1.45;
+}
+.hero-guarantee p strong {
+  color: var(--gold);
+  font-weight: 700;
+}
 
 /* stats bar */
 .hero-stats {
@@ -560,6 +587,14 @@ footer small { font-size: 0.75rem; color: var(--dim); }
           <span data-en>What's included? ↓</span>
         </a>
       </div>
+      <div class="hero-guarantee">
+        <span class="g-icon">🛡️</span>
+        <p>
+          <span data-es><strong>Garantía total:</strong> Si en 10 días no tienes el sistema completo funcionando y listo para cobrar, te devuelvo el 100% del dinero.</span>
+          <span data-en><strong>Full guarantee:</strong> If in 10 days you don't have the complete system working and ready to charge, I refund 100% of your money.</span>
+        </p>
+      </div>
+
       <div class="hero-stats">
         <div>
           <div class="stat-n">7–10</div>

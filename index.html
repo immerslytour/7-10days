@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Your digital product selling in 7 days</title>
+<title>Launch your program in 7 days — ready to accept payments</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -25,8 +25,7 @@ html { scroll-behavior: smooth; }
   --gold:     #E8B84B;
   --gold-bg:  rgba(232,184,75,0.10);
   --gold-mid: rgba(232,184,75,0.22);
-  --font-d: 'Manrope', sans-serif;
-  --font-b: 'Manrope', sans-serif;
+  --font: 'Manrope', sans-serif;
   --max-w: 1060px;
   --side: clamp(1.25rem, 5vw, 3.5rem);
   --r-sm: 6px; --r-md: 10px; --r-lg: 16px;
@@ -51,35 +50,22 @@ body {
   padding-inline: var(--side);
 }
 
-/* ─── LANG SWITCHER ──────────────────────────────── */
+/* ─── LANG BAR ───────────────────────────────────── */
 .lang-bar {
   background: var(--surface);
   border-bottom: 1px solid var(--border);
   padding: 0.4rem var(--side);
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 0.25rem;
+  display: flex; justify-content: flex-end; align-items: center; gap: 0.25rem;
 }
 .lang-btn {
-  background: none;
-  border: 1px solid transparent;
-  color: var(--muted);
-  font-family: var(--font-b);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  padding: 0.25rem 0.6rem;
-  border-radius: 4px;
-  cursor: pointer;
+  background: none; border: 1px solid transparent;
+  color: var(--muted); font-family: var(--font);
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em;
+  padding: 0.25rem 0.6rem; border-radius: 4px; cursor: pointer;
   transition: color 0.15s, border-color 0.15s;
 }
 .lang-btn:hover { color: var(--white); }
-.lang-btn.active {
-  color: var(--gold);
-  border-color: var(--gold-mid);
-  background: var(--gold-bg);
-}
+.lang-btn.active { color: var(--gold); border-color: var(--gold-mid); background: var(--gold-bg); }
 .lang-sep { color: var(--border-light); font-size: 0.75rem; }
 
 /* ─── NAV ────────────────────────────────────────── */
@@ -90,31 +76,16 @@ body {
   border-bottom: 1px solid var(--border);
 }
 .nav-inner {
-  max-width: var(--max-w);
-  margin-inline: auto;
-  padding-inline: var(--side);
-  height: 58px;
-  display: flex; align-items: center; justify-content: space-between;
+  max-width: var(--max-w); margin-inline: auto; padding-inline: var(--side);
+  height: 58px; display: flex; align-items: center; justify-content: space-between;
 }
-.nav-mark {
-  font-family: var(--font-d);
-  font-weight: 800;
-  font-size: 0.95rem;
-  letter-spacing: -0.01em;
-  color: var(--white);
-}
+.nav-mark { font-family: var(--font); font-weight: 800; font-size: 0.95rem; color: var(--white); }
 .nav-mark em { font-style: normal; color: var(--gold); }
 .btn-nav {
-  background: var(--gold);
-  color: #0B0B0D;
-  font-family: var(--font-b);
-  font-weight: 700;
-  font-size: 0.8rem;
-  padding: 0.45rem 1.1rem;
-  border-radius: var(--r-sm);
-  text-decoration: none;
-  transition: opacity 0.15s;
-  white-space: nowrap;
+  background: var(--gold); color: #0B0B0D; font-family: var(--font);
+  font-weight: 700; font-size: 0.8rem; padding: 0.45rem 1.1rem;
+  border-radius: var(--r-sm); text-decoration: none;
+  transition: opacity 0.15s; white-space: nowrap;
 }
 .btn-nav:hover { opacity: 0.85; }
 
@@ -123,71 +94,68 @@ body {
   padding-top: clamp(4.5rem, 11vw, 8rem);
   padding-bottom: clamp(4rem, 9vw, 6rem);
 }
+.hero-body { max-width: 680px; }
 
-
-
-.hero-body { max-width: 600px; }
-
-/* eyebrow tag */
 .tag {
   display: inline-flex; align-items: center; gap: 0.45rem;
-  font-size: 0.7rem; font-weight: 600;
+  font-size: 0.7rem; font-weight: 700;
   letter-spacing: 0.13em; text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 1.375rem;
+  color: var(--gold); margin-bottom: 1.375rem;
 }
 .tag::before {
-  content: '';
-  display: block; width: 24px; height: 1px;
+  content: ''; display: block; width: 24px; height: 1px;
   background: var(--gold); flex-shrink: 0;
 }
 
-/* headline */
 .hero-h1 {
-  font-family: var(--font-d);
-  font-weight: 800;
-  font-size: clamp(3rem, 7vw, 5.25rem);
-  line-height: 1.0;
-  letter-spacing: -0.015em;
-  margin-bottom: 1.375rem;
-  color: var(--white);
+  font-family: var(--font); font-weight: 800;
+  font-size: clamp(2.75rem, 6.5vw, 5rem);
+  line-height: 1.05; letter-spacing: -0.02em;
+  margin-bottom: 1.25rem; color: var(--white);
 }
 .hero-h1 .hi { color: var(--gold); }
 
-/* subhead */
-.hero-lead {
-  font-size: clamp(1rem, 1.9vw, 1.125rem);
-  color: var(--muted);
-  line-height: 1.72;
-  margin-bottom: 2rem;
-  max-width: 490px;
+.hero-sub {
+  font-size: clamp(1rem, 1.9vw, 1.175rem);
+  color: var(--muted); line-height: 1.72;
+  margin-bottom: 2rem; max-width: 560px;
 }
-.hero-lead strong { color: var(--white); font-weight: 500; }
+.hero-sub strong { color: var(--white); font-weight: 600; }
 
-/* CTAs */
+/* for whom line */
+.hero-for {
+  display: flex; align-items: center; gap: 0.625rem;
+  margin-bottom: 2rem;
+  font-size: 0.85rem; color: var(--muted);
+}
+.hero-for-label {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--dim);
+  white-space: nowrap;
+}
+.avatar-pills {
+  display: flex; flex-wrap: wrap; gap: 0.4rem;
+}
+.avatar-pill {
+  background: var(--surface); border: 1px solid var(--border);
+  color: var(--muted); font-size: 0.75rem; font-weight: 600;
+  padding: 0.2rem 0.65rem; border-radius: 100px;
+  white-space: nowrap;
+}
+
 .hero-ctas {
-  display: flex; flex-wrap: wrap;
-  align-items: center; gap: 1rem;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 1rem;
   margin-bottom: 1.5rem;
 }
 .btn-primary {
-  background: var(--gold);
-  color: #0B0B0D;
-  font-family: var(--font-b);
-  font-weight: 700;
-  font-size: 0.975rem;
-  padding: 0.875rem 1.875rem;
-  border-radius: var(--r-md);
-  text-decoration: none;
-  display: inline-block;
-  transition: opacity 0.15s, transform 0.15s;
-  white-space: nowrap;
+  background: var(--gold); color: #0B0B0D; font-family: var(--font);
+  font-weight: 700; font-size: 0.975rem; padding: 0.875rem 1.875rem;
+  border-radius: var(--r-md); text-decoration: none; display: inline-block;
+  transition: opacity 0.15s, transform 0.15s; white-space: nowrap;
 }
 .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
 .btn-text {
-  color: var(--muted);
-  font-size: 0.875rem;
-  text-decoration: none;
+  color: var(--muted); font-size: 0.875rem; text-decoration: none;
   display: inline-flex; align-items: center; gap: 0.3rem;
   transition: color 0.15s;
 }
@@ -195,52 +163,28 @@ body {
 
 /* guarantee banner */
 .hero-guarantee {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.625rem;
-  background: var(--gold-bg);
-  border: 1px solid var(--gold-mid);
-  border-radius: 8px;
-  padding: 0.75rem 1.125rem;
-  margin-bottom: 1.75rem;
-  max-width: 520px;
+  display: flex; align-items: flex-start; gap: 0.75rem;
+  background: var(--gold-bg); border: 1px solid var(--gold-mid);
+  border-radius: var(--r-md); padding: 0.875rem 1.125rem;
+  margin-bottom: 2rem; max-width: 560px;
 }
-.hero-guarantee .g-icon {
-  font-size: 1.1rem;
-  flex-shrink: 0;
-  line-height: 1;
-}
-.hero-guarantee p {
-  font-size: 0.875rem;
-  color: var(--white);
-  line-height: 1.45;
-}
-.hero-guarantee p strong {
-  color: var(--gold);
-  font-weight: 700;
-}
+.g-icon { font-size: 1rem; flex-shrink: 0; line-height: 1.6; }
+.hero-guarantee p { font-size: 0.875rem; color: var(--white); line-height: 1.5; }
+.hero-guarantee p strong { color: var(--gold); font-weight: 700; }
 
-/* stats bar */
+/* stats */
 .hero-stats {
-  display: flex; flex-wrap: wrap; gap: 2rem;
-  padding-top: 1.75rem;
-  border-top: 1px solid var(--border);
+  display: flex; flex-wrap: wrap; gap: 2.5rem;
+  padding-top: 1.75rem; border-top: 1px solid var(--border);
 }
 .stat-n {
-  font-family: var(--font-d);
-  font-weight: 800;
-  font-size: 1.875rem;
-  line-height: 1;
-  letter-spacing: -0.018em;
-  color: var(--white);   /* explicit — always visible */
+  font-family: var(--font); font-weight: 800;
+  font-size: 1.875rem; line-height: 1;
+  letter-spacing: -0.02em; color: var(--white);
 }
-.stat-l {
-  font-size: 0.775rem;
-  color: var(--muted);
-  margin-top: 0.25rem;
-}
+.stat-l { font-size: 0.775rem; color: var(--muted); margin-top: 0.25rem; }
 
-/* ─── SECTIONS ───────────────────────────────────── */
+/* ─── SECTION BASE ───────────────────────────────── */
 .section {
   padding-top: clamp(3.5rem, 8vw, 6rem);
   padding-bottom: clamp(3.5rem, 8vw, 6rem);
@@ -248,14 +192,14 @@ body {
   background: var(--bg);
 }
 .section-eyebrow {
-  font-size: 0.68rem; font-weight: 600;
+  font-size: 0.68rem; font-weight: 700;
   letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--gold); margin-bottom: 0.875rem;
 }
 .section-h2 {
-  font-family: var(--font-d); font-weight: 800;
+  font-family: var(--font); font-weight: 800;
   font-size: clamp(1.75rem, 4vw, 2.875rem);
-  letter-spacing: -0.015em; line-height: 1.08;
+  letter-spacing: -0.018em; line-height: 1.1;
   margin-bottom: 0.875rem; color: var(--white);
 }
 .section-lead {
@@ -263,100 +207,119 @@ body {
   line-height: 1.7; max-width: 520px;
 }
 
-/* ─── PROCESS GRID ───────────────────────────────── */
-.process-grid {
+/* ─── FOR WHOM SECTION ───────────────────────────── */
+.for-whom-grid {
+  margin-top: 3rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1px;
   background: var(--border);
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
   overflow: hidden;
+}
+.for-whom-cell {
+  background: var(--surface);
+  padding: 1.5rem;
+  display: flex; flex-direction: column; gap: 0.5rem;
+}
+.for-whom-icon { font-size: 1.25rem; line-height: 1; }
+.for-whom-title { font-weight: 700; font-size: 0.9rem; color: var(--white); }
+.for-whom-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+/* pain points */
+.pain-list {
+  margin-top: 2.5rem;
+  display: flex; flex-direction: column; gap: 0.625rem;
+  max-width: 600px;
+}
+.pain-item {
+  display: flex; align-items: flex-start; gap: 0.75rem;
+  padding: 0.875rem 1.125rem;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r-md); font-size: 0.875rem;
+  color: var(--white); line-height: 1.5;
+}
+.pain-dot {
+  flex-shrink: 0; width: 6px; height: 6px;
+  border-radius: 50%; background: var(--gold);
+  margin-top: 0.45rem;
+}
+
+/* ─── PROCESS ────────────────────────────────────── */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1px; background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg); overflow: hidden;
   margin-top: 3rem;
 }
 .process-cell {
-  background: var(--surface);
-  padding: 1.875rem 1.5rem;
+  background: var(--surface); padding: 1.875rem 1.5rem;
   display: flex; flex-direction: column; gap: 0.6rem;
 }
 .process-n {
-  font-family: var(--font-d); font-weight: 800;
-  font-size: 2.25rem; line-height: 1;
-  letter-spacing: -0.015em; color: var(--gold);
+  font-family: var(--font); font-weight: 800;
+  font-size: 2rem; line-height: 1;
+  letter-spacing: -0.02em; color: var(--gold);
 }
-.process-t { font-weight: 600; font-size: 0.9rem; color: var(--white); }
+.process-t { font-weight: 700; font-size: 0.9rem; color: var(--white); }
 .process-d { font-size: 0.825rem; color: var(--muted); line-height: 1.6; }
 
 /* ─── DELIVERABLES ───────────────────────────────── */
 .del-list {
   margin-top: 3rem;
   border: 1px solid var(--border);
-  border-radius: var(--r-lg);
-  overflow: hidden;
+  border-radius: var(--r-lg); overflow: hidden;
 }
 .del-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1.25rem;
+  display: flex; justify-content: space-between;
+  align-items: flex-start; gap: 1.25rem;
   padding: 1.125rem 1.5rem;
   border-bottom: 1px solid var(--border);
-  background: var(--surface);
-  transition: background 0.12s;
+  background: var(--surface); transition: background 0.12s;
 }
 .del-row:last-child { border-bottom: none; }
 .del-row:hover { background: #16161A; }
-.del-name { font-weight: 600; font-size: 0.9rem; color: var(--white); margin-bottom: 0.2rem; }
+.del-name { font-weight: 700; font-size: 0.9rem; color: var(--white); margin-bottom: 0.2rem; }
 .del-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
 .pill {
-  flex-shrink: 0;
-  background: var(--gold-bg);
-  border: 1px solid var(--gold-mid);
-  color: var(--gold);
+  flex-shrink: 0; background: var(--gold-bg);
+  border: 1px solid var(--gold-mid); color: var(--gold);
   font-size: 0.68rem; font-weight: 700;
-  padding: 0.22rem 0.65rem;
-  border-radius: 100px;
+  padding: 0.22rem 0.65rem; border-radius: 100px;
   white-space: nowrap; margin-top: 2px;
 }
 
-/* ─── NOT INCLUDED ───────────────────────────────── */
+/* not included */
 .not-grid {
   margin-top: 3rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 0.75rem;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.75rem;
 }
 .not-item {
   display: flex; gap: 0.75rem; align-items: flex-start;
-  padding: 1rem 1.125rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--r-md);
+  padding: 1rem 1.125rem; background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--r-md);
   font-size: 0.845rem; color: var(--muted); line-height: 1.55;
 }
 .x-dot {
-  flex-shrink: 0; width: 18px; height: 18px;
-  border-radius: 50%; background: var(--border-light);
-  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; width: 18px; height: 18px; border-radius: 50%;
+  background: var(--border-light); display: flex;
+  align-items: center; justify-content: center;
   font-size: 0.6rem; color: var(--dim); margin-top: 2px;
 }
 
 /* ─── PRICING ────────────────────────────────────── */
 .pricing-grid {
-  margin-top: 3rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  align-items: start;
+  margin-top: 3rem; display: grid;
+  grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: start;
 }
 @media (max-width: 680px) { .pricing-grid { grid-template-columns: 1fr; } }
 
 .price-card {
-  background: var(--surface);
-  border: 1px solid var(--gold);
-  border-radius: var(--r-lg);
-  padding: 2.25rem;
-  position: relative;
+  background: var(--surface); border: 1px solid var(--gold);
+  border-radius: var(--r-lg); padding: 2.25rem; position: relative;
 }
 .price-badge {
   position: absolute; top: -13px; left: 1.5rem;
@@ -366,69 +329,53 @@ body {
   padding: 0.22rem 0.7rem; border-radius: 4px;
 }
 .price-tier {
-  font-size: 0.68rem; font-weight: 600;
+  font-size: 0.68rem; font-weight: 700;
   letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--muted); margin-bottom: 1rem; margin-top: 0.5rem;
 }
-.price-row {
-  display: flex; align-items: flex-start; gap: 0.3rem;
-  margin-bottom: 0.375rem;
-}
-.price-sym {
-  font-family: var(--font-d); font-weight: 700;
-  font-size: 1.5rem; color: var(--muted); margin-top: 0.65rem;
-}
+.price-row { display: flex; align-items: flex-start; gap: 0.3rem; margin-bottom: 0.375rem; }
+.price-sym { font-family: var(--font); font-weight: 700; font-size: 1.5rem; color: var(--muted); margin-top: 0.65rem; }
 .price-num {
-  font-family: var(--font-d); font-weight: 800;
+  font-family: var(--font); font-weight: 800;
   font-size: clamp(3rem, 7vw, 4.5rem);
-  line-height: 1; letter-spacing: -0.018em; color: var(--white);
+  line-height: 1; letter-spacing: -0.03em; color: var(--white);
 }
 .price-note { font-size: 0.78rem; color: var(--muted); margin-bottom: 1.5rem; }
 .price-list {
-  list-style: none;
-  display: flex; flex-direction: column; gap: 0.6rem;
-  margin-bottom: 1.75rem;
+  list-style: none; display: flex; flex-direction: column;
+  gap: 0.6rem; margin-bottom: 1.75rem;
 }
 .price-list li {
   display: flex; align-items: flex-start; gap: 0.55rem;
-  font-size: 0.85rem; color: var(--white); line-height: 1.45;
+  font-size: 0.875rem; color: var(--white); line-height: 1.45;
 }
 .price-list .pill { font-size: 0.6rem; padding: 0.18rem 0.5rem; margin-top: 0; }
-.guarantee {
-  padding: 1rem 1.125rem;
-  background: var(--gold-bg);
-  border: 1px solid var(--gold-mid);
-  border-radius: var(--r-md);
-  font-size: 0.8rem; color: var(--muted); line-height: 1.6;
-  margin-bottom: 1.5rem;
+.guarantee-box {
+  padding: 1rem 1.125rem; background: var(--gold-bg);
+  border: 1px solid var(--gold-mid); border-radius: var(--r-md);
+  font-size: 0.825rem; color: var(--white); line-height: 1.6; margin-bottom: 1.5rem;
 }
-.guarantee strong { color: var(--gold); }
+.guarantee-box strong { color: var(--gold); }
 .btn-block {
   display: block; width: 100%; text-align: center;
-  background: var(--gold); color: #0B0B0D;
-  font-family: var(--font-b); font-weight: 700;
-  font-size: 0.975rem; padding: 0.875rem 1rem;
-  border-radius: var(--r-md); text-decoration: none;
-  transition: opacity 0.15s;
+  background: var(--gold); color: #0B0B0D; font-family: var(--font);
+  font-weight: 700; font-size: 0.975rem; padding: 0.875rem 1rem;
+  border-radius: var(--r-md); text-decoration: none; transition: opacity 0.15s;
 }
 .btn-block:hover { opacity: 0.88; }
 
 .price-why { display: flex; flex-direction: column; gap: 1rem; }
 .why-item {
-  padding: 1.25rem 1.375rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--r-md);
+  padding: 1.25rem 1.375rem; background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--r-md);
 }
-.why-title { font-weight: 600; font-size: 0.875rem; color: var(--white); margin-bottom: 0.3rem; }
+.why-title { font-weight: 700; font-size: 0.875rem; color: var(--white); margin-bottom: 0.3rem; }
 .why-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
 
 /* ─── FAQ ────────────────────────────────────────── */
 .faq-stack {
-  margin-top: 3rem;
-  border: 1px solid var(--border);
-  border-radius: var(--r-lg);
-  overflow: hidden;
+  margin-top: 3rem; border: 1px solid var(--border);
+  border-radius: var(--r-lg); overflow: hidden;
 }
 .faq-item { border-bottom: 1px solid var(--border); }
 .faq-item:last-child { border-bottom: none; }
@@ -436,36 +383,32 @@ body {
   width: 100%; background: var(--surface); border: none;
   display: flex; justify-content: space-between; align-items: center;
   padding: 1.125rem 1.5rem; gap: 1rem; cursor: pointer;
-  color: var(--white); font-family: var(--font-b);
+  color: var(--white); font-family: var(--font);
   font-size: 0.875rem; font-weight: 600; text-align: left;
   transition: background 0.12s;
 }
 .faq-btn:hover { background: #16161A; }
 .faq-icon {
-  flex-shrink: 0; width: 22px; height: 22px;
-  border-radius: 50%; border: 1px solid var(--border-light);
-  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%;
+  border: 1px solid var(--border-light); display: flex;
+  align-items: center; justify-content: center;
   color: var(--muted); font-size: 1rem; line-height: 1;
   transition: transform 0.22s, border-color 0.15s, color 0.15s;
 }
 .faq-item.open .faq-icon { transform: rotate(45deg); border-color: var(--gold); color: var(--gold); }
 .faq-body {
-  max-height: 0; overflow: hidden;
-  background: var(--surface);
+  max-height: 0; overflow: hidden; background: var(--surface);
   font-size: 0.845rem; color: var(--muted); line-height: 1.75;
-  transition: max-height 0.3s ease, padding 0.2s;
-  padding: 0 1.5rem;
+  transition: max-height 0.3s ease, padding 0.2s; padding: 0 1.5rem;
 }
-.faq-item.open .faq-body { max-height: 320px; padding: 0 1.5rem 1.25rem; }
+.faq-item.open .faq-body { max-height: 360px; padding: 0 1.5rem 1.25rem; }
 
 /* ─── FINAL CTA ──────────────────────────────────── */
 .final-cta {
   text-align: center;
   padding: clamp(5rem, 11vw, 9rem) var(--side);
-  position: relative;
-  overflow: hidden;
-  border-top: 1px solid var(--border);
-  background: var(--bg);
+  position: relative; overflow: hidden;
+  border-top: 1px solid var(--border); background: var(--bg);
 }
 .cta-glow {
   position: absolute; inset: 0;
@@ -473,9 +416,9 @@ body {
   pointer-events: none;
 }
 .final-cta h2 {
-  font-family: var(--font-d); font-weight: 800;
+  font-family: var(--font); font-weight: 800;
   font-size: clamp(2.25rem, 5vw, 3.75rem);
-  letter-spacing: -0.018em; line-height: 1.08;
+  letter-spacing: -0.02em; line-height: 1.1;
   margin-bottom: 1rem; position: relative; color: var(--white);
 }
 .final-cta h2 em { font-style: normal; color: var(--gold); }
@@ -495,10 +438,7 @@ footer {
   align-items: center; justify-content: space-between; gap: 0.75rem;
   background: var(--bg);
 }
-.footer-mark {
-  font-family: var(--font-d); font-weight: 800;
-  font-size: 0.875rem; color: var(--dim); text-decoration: none;
-}
+.footer-mark { font-family: var(--font); font-weight: 800; font-size: 0.875rem; color: var(--dim); text-decoration: none; }
 .footer-mark em { font-style: normal; color: var(--gold); }
 footer small { font-size: 0.75rem; color: var(--dim); }
 
@@ -506,14 +446,14 @@ footer small { font-size: 0.75rem; color: var(--dim); }
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.5s ease, transform 0.5s ease; }
 .reveal.in { opacity: 1; transform: none; }
 
-/* ─── RESPONSIVE ─────────────────────────────────── */
-@media (max-width: 600px) {
-  .not-grid { grid-template-columns: 1fr; }
-}
-
-/* ─── i18n hidden ────────────────────────────────── */
+/* ─── i18n ───────────────────────────────────────── */
 [data-en], [data-es] { display: none; }
 .lang-es [data-es], .lang-en [data-en] { display: revert; }
+
+@media (max-width: 600px) {
+  .not-grid { grid-template-columns: 1fr; }
+  .hero-for { flex-direction: column; align-items: flex-start; }
+}
 
 </style>
 </head>
@@ -530,9 +470,9 @@ footer small { font-size: 0.75rem; color: var(--dim); }
 <header class="nav">
   <div class="nav-inner">
     <span class="nav-mark">Launch<em>.</em></span>
-    <a href="#precio" class="btn-nav">
-      <span data-es>Reservar lugar →</span>
+    <a href="#pricing" class="btn-nav">
       <span data-en>Book your spot →</span>
+      <span data-es>Reservar lugar →</span>
     </a>
   </div>
 </header>
@@ -541,306 +481,407 @@ footer small { font-size: 0.75rem; color: var(--dim); }
 <section class="hero">
   <div class="wrap">
     <div class="hero-body">
+
       <div class="tag">
-        <span data-es>Servicio de lanzamiento</span>
-        <span data-en>Launch service</span>
+        <span data-en>For coaches & creators</span>
+        <span data-es>Para coaches y creadores</span>
       </div>
+
       <h1 class="hero-h1">
-        <span data-es>Tu producto<br>vendiendo en<br><span class="hi">7 días.</span></span>
-        <span data-en>Your product<br>selling in<br><span class="hi">7 days.</span></span>
+        <span data-en>I build your complete<br>sales system so you can<br><span class="hi">start charging in 7 days.</span></span>
+        <span data-es>Te construyo el sistema<br>de ventas completo para<br><span class="hi">empezar a cobrar en 7 días.</span></span>
       </h1>
-      <p class="hero-lead">
-        <span data-es>Landing page, pagos, entrega automática y emails. <strong>Todo configurado y probado.</strong> Tú traes tu producto. Yo armo el sistema que lo vende.</span>
-        <span data-en>Landing page, payments, automatic delivery and emails. <strong>All set up and tested.</strong> You bring your product. I build the system that sells it.</span>
+
+      <p class="hero-sub">
+        <span data-en>You have the program. I build everything around it — landing page, payments, automatic delivery, emails. <strong>All set up, tested, and ready to sell.</strong> Without you touching a single line of tech.</span>
+        <span data-es>Tú tienes el programa. Yo construyo todo lo demás — landing page, pagos, entrega automática, emails. <strong>Todo configurado, probado y listo para vender.</strong> Sin que toques nada de tecnología.</span>
       </p>
+
+      <div class="hero-for">
+        <span class="hero-for-label">
+          <span data-en>For</span><span data-es>Para</span>
+        </span>
+        <div class="avatar-pills">
+          <span class="avatar-pill">Coach</span>
+          <span class="avatar-pill">Consultant</span>
+          <span class="avatar-pill">Course creator</span>
+          <span class="avatar-pill">Mentor</span>
+          <span class="avatar-pill">Solopreneur</span>
+        </div>
+      </div>
+
       <div class="hero-ctas">
-        <a href="#precio" class="btn-primary">
-          <span data-es>Quiero lanzar mi producto →</span>
-          <span data-en>I want to launch my product →</span>
+        <a href="#pricing" class="btn-primary">
+          <span data-en>I want to launch my program →</span>
+          <span data-es>Quiero lanzar mi programa →</span>
         </a>
-        <a href="#incluye" class="btn-text">
-          <span data-es>¿Qué incluye? ↓</span>
+        <a href="#includes" class="btn-text">
           <span data-en>What's included? ↓</span>
+          <span data-es>¿Qué incluye? ↓</span>
         </a>
       </div>
+
       <div class="hero-guarantee">
         <span class="g-icon">🛡️</span>
         <p>
-          <span data-es><strong>Garantía total:</strong> Si en 10 días no tienes el sistema completo funcionando y listo para cobrar, te devuelvo el 100% del dinero.</span>
-          <span data-en><strong>Full guarantee:</strong> If in 10 days you don't have the complete system working and ready to charge, I refund 100% of your money.</span>
+          <span data-en><strong>Our guarantee:</strong> If in 7 days you're not fully ready to accept clients, we keep working for free until it's done.</span>
+          <span data-es><strong>Nuestra garantía:</strong> Si en 7 días no tienes todo listo para aceptar clientes, seguimos trabajando gratis hasta completarlo.</span>
         </p>
       </div>
 
       <div class="hero-stats">
         <div>
-          <div class="stat-n">7–10</div>
+          <div class="stat-n">7</div>
           <div class="stat-l">
-            <span data-es>días hasta tu primer pago</span>
             <span data-en>days to your first payment</span>
+            <span data-es>días hasta tu primer pago</span>
           </div>
         </div>
         <div>
           <div class="stat-n">100%</div>
           <div class="stat-l">
-            <span data-es>testeado antes de entregarte</span>
             <span data-en>tested before delivery</span>
+            <span data-es>testeado antes de entregarte</span>
           </div>
         </div>
         <div>
-          <div class="stat-n">14d</div>
+          <div class="stat-n">0</div>
           <div class="stat-l">
-            <span data-es>soporte post-entrega incluido</span>
-            <span data-en>post-delivery support included</span>
+            <span data-en>tech skills required from you</span>
+            <span data-es>conocimientos técnicos necesarios</span>
           </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOR WHOM -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <span data-en>This is for you if…</span>
+      <span data-es>Esto es para ti si…</span>
+    </div>
+    <h2 class="section-h2">
+      <span data-en>You have the expertise.<br>You're stuck on the tech.</span>
+      <span data-es>Tienes el conocimiento.<br>La tecnología te está frenando.</span>
+    </h2>
+    <p class="section-lead">
+      <span data-en>You've been delaying your launch for weeks — not because your program isn't ready, but because you don't want to deal with landing pages, Stripe, automations, and email flows.</span>
+      <span data-es>Llevas semanas posponiendo tu lanzamiento — no porque tu programa no esté listo, sino porque no quieres lidiar con landing pages, Stripe, automatizaciones y emails.</span>
+    </p>
+
+    <div class="for-whom-grid">
+      <div class="for-whom-cell">
+        <div class="for-whom-icon">✅</div>
+        <div class="for-whom-title">
+          <span data-en>You have a digital product</span>
+          <span data-es>Tienes un producto digital</span>
+        </div>
+        <div class="for-whom-desc">
+          <span data-en>Course, mentorship, group program, community, or packaged service — ready or almost ready.</span>
+          <span data-es>Curso, mentoría, programa grupal, comunidad o servicio empaquetado — listo o casi listo.</span>
+        </div>
+      </div>
+      <div class="for-whom-cell">
+        <div class="for-whom-icon">✅</div>
+        <div class="for-whom-title">
+          <span data-en>You have (or can get) clients</span>
+          <span data-es>Tienes (o puedes conseguir) clientes</span>
+        </div>
+        <div class="for-whom-desc">
+          <span data-en>You have some audience or a way to reach clients — even if it's small. You just need the system to convert them.</span>
+          <span data-es>Tienes algo de audiencia o forma de llegar a clientes — aunque sea pequeña. Solo necesitas el sistema para convertirlos.</span>
+        </div>
+      </div>
+      <div class="for-whom-cell">
+        <div class="for-whom-icon">✅</div>
+        <div class="for-whom-title">
+          <span data-en>You want to start charging now</span>
+          <span data-es>Quieres empezar a cobrar ahora</span>
+        </div>
+        <div class="for-whom-desc">
+          <span data-en>You're tired of waiting. You value your time and prefer to pay someone to solve it fast rather than spend months learning tools.</span>
+          <span data-es>Estás cansado de esperar. Valoras tu tiempo y prefieres pagar para que alguien lo resuelva rápido en lugar de meses aprendiendo herramientas.</span>
+        </div>
+      </div>
+      <div class="for-whom-cell">
+        <div class="for-whom-icon">✅</div>
+        <div class="for-whom-title">
+          <span data-en>You don't want to touch tech</span>
+          <span data-es>No quieres tocar tecnología</span>
+        </div>
+        <div class="for-whom-desc">
+          <span data-en>Landing pages, Stripe, email automations — you don't want to learn any of it. You want it done and working.</span>
+          <span data-es>Landing pages, Stripe, automatizaciones de email — no quieres aprender nada de eso. Quieres que esté hecho y funcionando.</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROCESO -->
-<section class="section reveal" id="proceso">
+<!-- PROCESS -->
+<section class="section reveal">
   <div class="wrap">
     <div class="section-eyebrow">
-      <span data-es>Cómo funciona</span>
       <span data-en>How it works</span>
+      <span data-es>Cómo funciona</span>
     </div>
     <h2 class="section-h2">
-      <span data-es>Simple. Rápido.<br>Sin rodeos.</span>
-      <span data-en>Simple. Fast.<br>No fluff.</span>
+      <span data-en>Four steps.<br>You barely have to do anything.</span>
+      <span data-es>Cuatro pasos.<br>Casi no tienes que hacer nada.</span>
     </h2>
     <p class="section-lead">
-      <span data-es>Cuatro pasos del briefing al primer pago.</span>
-      <span data-en>Four steps from briefing to first payment.</span>
+      <span data-en>From our first call to your first payment in 7 days.</span>
+      <span data-es>Desde nuestra primera llamada hasta tu primer pago en 7 días.</span>
     </p>
     <div class="process-grid">
       <div class="process-cell">
         <div class="process-n">01</div>
-        <div class="process-t"><span data-es>Briefing (1 h)</span><span data-en>Briefing (1 h)</span></div>
+        <div class="process-t">
+          <span data-en>Briefing call (1h)</span>
+          <span data-es>Llamada de briefing (1h)</span>
+        </div>
         <div class="process-d">
-          <span data-es>Me cuentas tu producto, tu precio y a quién va. Eso es todo lo que necesito para arrancar.</span>
-          <span data-en>You tell me your product, price, and target audience. That's all I need to get started.</span>
+          <span data-en>You tell me about your program, your price, and your audience. That's all I need. I take it from there.</span>
+          <span data-es>Me cuentas tu programa, tu precio y tu audiencia. Eso es todo lo que necesito. Yo tomo el control desde ahí.</span>
         </div>
       </div>
       <div class="process-cell">
         <div class="process-n">02</div>
-        <div class="process-t"><span data-es>Construyo tu sistema</span><span data-en>I build your system</span></div>
+        <div class="process-t">
+          <span data-en>I build everything</span>
+          <span data-es>Construyo todo</span>
+        </div>
         <div class="process-d">
-          <span data-es>Landing + checkout + entrega automática + emails. Trabajo mientras tú sigues con tu vida.</span>
-          <span data-en>Landing + checkout + automatic delivery + emails. I work while you carry on with your life.</span>
+          <span data-en>Landing page, checkout, automatic delivery, confirmation emails. While you focus on what you do best.</span>
+          <span data-es>Landing page, checkout, entrega automática, emails de confirmación. Mientras tú te enfocas en lo que mejor haces.</span>
         </div>
       </div>
       <div class="process-cell">
         <div class="process-n">03</div>
-        <div class="process-t"><span data-es>Pruebo todo</span><span data-en>I test everything</span></div>
+        <div class="process-t">
+          <span data-en>I test everything</span>
+          <span data-es>Pruebo todo</span>
+        </div>
         <div class="process-d">
-          <span data-es>Pago de prueba real, flujo de entrega, emails. Si algo falla lo corrijo yo, no tú.</span>
-          <span data-en>Real test payment, delivery flow, emails. If anything breaks, I fix it — not you.</span>
+          <span data-en>Real test payment, full delivery flow, emails. If anything breaks, I fix it — not you.</span>
+          <span data-es>Pago de prueba real, flujo de entrega completo, emails. Si algo falla, lo corrijo yo, no tú.</span>
         </div>
       </div>
       <div class="process-cell">
         <div class="process-n">04</div>
-        <div class="process-t"><span data-es>Te entrego + capacito</span><span data-en>I deliver + train you</span></div>
+        <div class="process-t">
+          <span data-en>I hand it over + train you</span>
+          <span data-es>Te entrego + te capacito</span>
+        </div>
         <div class="process-d">
-          <span data-es>Llamada 1:1 de 30–45 min para que puedas usarlo. 14 días de soporte para ajustes.</span>
-          <span data-en>30–45 min 1:1 call so you can use it. 14 days of support for minor tweaks.</span>
+          <span data-en>30–45 min walkthrough so you can update the basics yourself. Then 14 days of support for any tweaks.</span>
+          <span data-es>30–45 min de capacitación para que puedas modificar lo básico solo. Luego 14 días de soporte para ajustes.</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- QUÉ INCLUYE -->
-<section class="section reveal" id="incluye">
+<!-- WHAT'S INCLUDED -->
+<section class="section reveal" id="includes">
   <div class="wrap">
     <div class="section-eyebrow">
-      <span data-es>Entregables</span><span data-en>Deliverables</span>
+      <span data-en>Deliverables</span>
+      <span data-es>Entregables</span>
     </div>
     <h2 class="section-h2">
-      <span data-es>Todo lo que necesitas.<br>Nada que no.</span>
-      <span data-en>Everything you need.<br>Nothing you don't.</span>
+      <span data-en>Everything you need to<br>start accepting payments.</span>
+      <span data-es>Todo lo que necesitas para<br>empezar a aceptar pagos.</span>
     </h2>
     <p class="section-lead">
-      <span data-es>Exactamente lo que recibes. Sin letra pequeña.</span>
-      <span data-en>Exactly what you get. No fine print.</span>
+      <span data-en>No gaps. No "figure it out yourself later." This is the complete system.</span>
+      <span data-es>Sin huecos. Sin "ya lo descubrirás después." Este es el sistema completo.</span>
     </p>
     <div class="del-list">
       <div class="del-row">
         <div>
-          <div class="del-name"><span data-es>Landing page de ventas</span><span data-en>Sales landing page</span></div>
-          <div class="del-desc"><span data-es>Diseño profesional, textos orientados a conversión, optimizada para móvil</span><span data-en>Professional design, conversion-focused copy, mobile-optimized</span></div>
+          <div class="del-name"><span data-en>Sales landing page</span><span data-es>Landing page de ventas</span></div>
+          <div class="del-desc"><span data-en>Professional design, conversion-focused copy, fully mobile-optimized</span><span data-es>Diseño profesional, textos orientados a conversión, optimizada para móvil</span></div>
         </div>
-        <span class="pill">✓ <span data-es>Incluido</span><span data-en>Included</span></span>
+        <span class="pill">✓ <span data-en>Included</span><span data-es>Incluido</span></span>
       </div>
       <div class="del-row">
         <div>
-          <div class="del-name"><span data-es>Integración de pagos</span><span data-en>Payment integration</span></div>
-          <div class="del-desc"><span data-es>Stripe configurado y funcionando. PayPal si lo prefieres</span><span data-en>Stripe set up and working. PayPal if you prefer</span></div>
+          <div class="del-name"><span data-en>Payment integration</span><span data-es>Integración de pagos</span></div>
+          <div class="del-desc"><span data-en>Stripe set up and tested. PayPal if you prefer</span><span data-es>Stripe configurado y probado. PayPal si lo prefieres</span></div>
         </div>
-        <span class="pill">✓ <span data-es>Incluido</span><span data-en>Included</span></span>
+        <span class="pill">✓ <span data-en>Included</span><span data-es>Incluido</span></span>
       </div>
       <div class="del-row">
         <div>
-          <div class="del-name"><span data-es>Entrega automática</span><span data-en>Automatic delivery</span></div>
-          <div class="del-desc"><span data-es>El cliente paga → acceso inmediato. Área de miembros, Drive, email — lo que uses</span><span data-en>Customer pays → instant access. Members area, Drive, email — whatever you use</span></div>
+          <div class="del-name"><span data-en>Automatic delivery</span><span data-es>Entrega automática</span></div>
+          <div class="del-desc"><span data-en>Client pays → instant access to your program. Members area, Drive, email — whatever you use</span><span data-es>El cliente paga → acceso inmediato a tu programa. Área de miembros, Drive, email — lo que uses</span></div>
         </div>
-        <span class="pill">✓ <span data-es>Incluido</span><span data-en>Included</span></span>
+        <span class="pill">✓ <span data-en>Included</span><span data-es>Incluido</span></span>
       </div>
       <div class="del-row">
         <div>
-          <div class="del-name"><span data-es>Checkout limpio</span><span data-en>Clean checkout</span></div>
-          <div class="del-desc"><span data-es>Flujo de compra sin fricción ni distracciones</span><span data-en>Frictionless purchase flow with no distractions</span></div>
+          <div class="del-name"><span data-en>Clean checkout flow</span><span data-es>Checkout sin fricción</span></div>
+          <div class="del-desc"><span data-en>Frictionless purchase experience — no distractions, no drop-offs</span><span data-es>Experiencia de compra sin fricción — sin distracciones ni abandonos</span></div>
         </div>
-        <span class="pill">✓ <span data-es>Incluido</span><span data-en>Included</span></span>
+        <span class="pill">✓ <span data-en>Included</span><span data-es>Incluido</span></span>
       </div>
       <div class="del-row">
         <div>
-          <div class="del-name"><span data-es>Emails automáticos</span><span data-en>Automated emails</span></div>
-          <div class="del-desc"><span data-es>Confirmación de compra + entrega del acceso. Sin que toques nada</span><span data-en>Purchase confirmation + access delivery. Without you touching a thing</span></div>
+          <div class="del-name"><span data-en>Automated emails</span><span data-es>Emails automáticos</span></div>
+          <div class="del-desc"><span data-en>Purchase confirmation + access delivery — triggered automatically, without you lifting a finger</span><span data-es>Confirmación de compra + entrega del acceso — automáticos, sin que hagas nada</span></div>
         </div>
-        <span class="pill">✓ <span data-es>Incluido</span><span data-en>Included</span></span>
+        <span class="pill">✓ <span data-en>Included</span><span data-es>Incluido</span></span>
       </div>
       <div class="del-row">
         <div>
-          <div class="del-name"><span data-es>Pruebas completas</span><span data-en>Full testing</span></div>
-          <div class="del-desc"><span data-es>Pago real de prueba, flujo de entrega verificado, emails confirmados</span><span data-en>Real test payment, verified delivery flow, confirmed emails</span></div>
+          <div class="del-name"><span data-en>Full QA testing</span><span data-es>Pruebas completas</span></div>
+          <div class="del-desc"><span data-en>Real test transaction, verified delivery, confirmed emails — before I hand anything over</span><span data-es>Transacción de prueba real, entrega verificada, emails confirmados — antes de entregarte nada</span></div>
         </div>
-        <span class="pill">✓ <span data-es>Incluido</span><span data-en>Included</span></span>
+        <span class="pill">✓ <span data-en>Included</span><span data-es>Incluido</span></span>
       </div>
       <div class="del-row">
         <div>
-          <div class="del-name"><span data-es>Capacitación 1:1</span><span data-en>1:1 training</span></div>
-          <div class="del-desc"><span data-es>30–45 min para que puedas usar y modificar lo básico sin depender de nadie</span><span data-en>30–45 min so you can use and tweak the basics without depending on anyone</span></div>
+          <div class="del-name"><span data-en>1:1 training session</span><span data-es>Sesión de capacitación 1:1</span></div>
+          <div class="del-desc"><span data-en>30–45 min walkthrough so you can update copy, prices, and basics without depending on anyone</span><span data-es>30–45 min para que puedas actualizar textos, precios y básicos sin depender de nadie</span></div>
         </div>
-        <span class="pill">✓ <span data-es>Incluido</span><span data-en>Included</span></span>
+        <span class="pill">✓ <span data-en>Included</span><span data-es>Incluido</span></span>
       </div>
       <div class="del-row">
         <div>
-          <div class="del-name"><span data-es>Soporte post-entrega</span><span data-en>Post-delivery support</span></div>
-          <div class="del-desc"><span data-es>14 días para ajustes menores. Respondo el mismo día</span><span data-en>14 days for minor tweaks. Same-day replies</span></div>
+          <div class="del-name"><span data-en>14-day post-delivery support</span><span data-es>14 días de soporte post-entrega</span></div>
+          <div class="del-desc"><span data-en>Minor tweaks covered. Same-day responses</span><span data-es>Ajustes menores cubiertos. Respuestas el mismo día</span></div>
         </div>
-        <span class="pill">✓ <span data-es>Incluido</span><span data-en>Included</span></span>
+        <span class="pill">✓ <span data-en>Included</span><span data-es>Incluido</span></span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- NO INCLUYE -->
+<!-- NOT INCLUDED -->
 <section class="section reveal">
   <div class="wrap">
     <div class="section-eyebrow">
-      <span data-es>Límites del servicio</span><span data-en>Scope limits</span>
+      <span data-en>Scope limits</span>
+      <span data-es>Límites del servicio</span>
     </div>
     <h2 class="section-h2">
-      <span data-es>Lo que no hago.<br>Honestidad total.</span>
-      <span data-en>What I don't do.<br>Full transparency.</span>
+      <span data-en>What's not included.<br>No surprises.</span>
+      <span data-es>Lo que no incluye.<br>Sin sorpresas.</span>
     </h2>
     <p class="section-lead">
-      <span data-es>Para que no haya sorpresas de ningún lado.</span>
-      <span data-en>So there are no surprises on either side.</span>
+      <span data-en>I'd rather be upfront than have an awkward conversation later.</span>
+      <span data-es>Prefiero ser claro ahora que tener una conversación incómoda después.</span>
     </p>
     <div class="not-grid">
       <div class="not-item"><span class="x-dot">✕</span>
-        <span data-es>Crear el contenido de tu producto — el curso, los videos, la mentoría. Eso lo traes tú.</span>
-        <span data-en>Creating your product content — the course, videos, mentorship. That's on you.</span>
+        <span data-en>Creating your program content — the course, videos, or mentorship material. You bring that.</span>
+        <span data-es>Crear el contenido de tu programa — el curso, videos o material de mentoría. Eso lo traes tú.</span>
       </div>
       <div class="not-item"><span class="x-dot">✕</span>
-        <span data-es>Copywriting largo desde cero. Mejoro lo que me das, pero la base la pones tú.</span>
-        <span data-en>Long-form copywriting from scratch. I improve what you give me, but the base is yours.</span>
+        <span data-en>Long-form copywriting from scratch. I improve what you give me, but the core message is yours.</span>
+        <span data-es>Copywriting largo desde cero. Mejoro lo que me das, pero el mensaje principal es tuyo.</span>
       </div>
       <div class="not-item"><span class="x-dot">✕</span>
-        <span data-es>Tráfico o anuncios pagados. Eso es un proyecto aparte.</span>
         <span data-en>Traffic or paid ads. That's a separate project.</span>
+        <span data-es>Tráfico o anuncios pagados. Eso es un proyecto aparte.</span>
       </div>
       <div class="not-item"><span class="x-dot">✕</span>
+        <span data-en>Logo design or full brand identity.</span>
         <span data-es>Diseño de logo o identidad visual completa.</span>
-        <span data-en>Logo design or full visual identity.</span>
       </div>
       <div class="not-item"><span class="x-dot">✕</span>
-        <span data-es>Embudos con upsells y order bumps. Disponible como add-on.</span>
-        <span data-en>Funnels with upsells and order bumps. Available as an add-on.</span>
+        <span data-en>Complex funnels with upsells and order bumps. Available as an add-on if needed.</span>
+        <span data-es>Embudos complejos con upsells y order bumps. Disponible como add-on si lo necesitas.</span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- PRICING -->
-<section class="section reveal" id="precio">
+<section class="section reveal" id="pricing">
   <div class="wrap">
     <div class="section-eyebrow">
-      <span data-es>Inversión</span><span data-en>Investment</span>
+      <span data-en>Investment</span>
+      <span data-es>Inversión</span>
     </div>
     <h2 class="section-h2">
-      <span data-es>Un precio.<br>Todo incluido.</span>
       <span data-en>One price.<br>Everything included.</span>
+      <span data-es>Un precio.<br>Todo incluido.</span>
     </h2>
     <p class="section-lead">
-      <span data-es>Sin sorpresas, sin cuotas ocultas, sin suscripciones.</span>
-      <span data-en>No surprises, no hidden fees, no subscriptions.</span>
+      <span data-en>No subscriptions. No hidden fees. No surprises.</span>
+      <span data-es>Sin suscripciones. Sin cuotas ocultas. Sin sorpresas.</span>
     </p>
     <div class="pricing-grid">
       <div class="price-card">
         <div class="price-badge">
-          <span data-es>Lanzamiento estándar</span><span data-en>Standard launch</span>
+          <span data-en>Complete launch</span>
+          <span data-es>Lanzamiento completo</span>
         </div>
         <div class="price-tier">
-          <span data-es>Pago único</span><span data-en>One-time payment</span>
+          <span data-en>One-time payment</span>
+          <span data-es>Pago único</span>
         </div>
         <div class="price-row">
           <span class="price-sym">$</span>
           <span class="price-num">997</span>
         </div>
         <div class="price-note">
-          <span data-es>Entrega en 7–10 días hábiles · USD</span>
-          <span data-en>Delivery in 7–10 business days · USD</span>
+          <span data-en>Delivered in 7 days · USD</span>
+          <span data-es>Entregado en 7 días · USD</span>
         </div>
         <ul class="price-list">
-          <li><span class="pill">✓</span> <span data-es>Landing page profesional</span><span data-en>Professional landing page</span></li>
-          <li><span class="pill">✓</span> <span data-es>Stripe o PayPal funcionando</span><span data-en>Stripe or PayPal working</span></li>
-          <li><span class="pill">✓</span> <span data-es>Entrega automática al cliente</span><span data-en>Automatic delivery to customer</span></li>
-          <li><span class="pill">✓</span> <span data-es>Checkout + emails automáticos</span><span data-en>Checkout + automated emails</span></li>
-          <li><span class="pill">✓</span> <span data-es>Todo testeado antes de entregarte</span><span data-en>Everything tested before delivery</span></li>
-          <li><span class="pill">✓</span> <span data-es>Capacitación 1:1 incluida</span><span data-en>1:1 training included</span></li>
-          <li><span class="pill">✓</span> <span data-es>14 días de soporte</span><span data-en>14 days of support</span></li>
+          <li><span class="pill">✓</span> <span data-en>Professional sales landing page</span><span data-es>Landing page profesional de ventas</span></li>
+          <li><span class="pill">✓</span> <span data-en>Stripe (or PayPal) payments live</span><span data-es>Pagos con Stripe (o PayPal) funcionando</span></li>
+          <li><span class="pill">✓</span> <span data-en>Automatic delivery to your clients</span><span data-es>Entrega automática a tus clientes</span></li>
+          <li><span class="pill">✓</span> <span data-en>Checkout + automated email flows</span><span data-es>Checkout + flujos de email automáticos</span></li>
+          <li><span class="pill">✓</span> <span data-en>Fully tested before I hand it over</span><span data-es>Todo probado antes de entregarte</span></li>
+          <li><span class="pill">✓</span> <span data-en>1:1 training session included</span><span data-es>Sesión de capacitación 1:1 incluida</span></li>
+          <li><span class="pill">✓</span> <span data-en>14 days post-delivery support</span><span data-es>14 días de soporte post-entrega</span></li>
         </ul>
-        <div class="guarantee">
-          <strong data-es>Sin riesgo.</strong>
+        <div class="guarantee-box">
           <strong data-en>Zero risk.</strong>
-          <span data-es> Si en el tiempo acordado no tienes un sistema funcionando y listo para vender, te devuelvo el dinero. Sin preguntas.</span>
-          <span data-en> If you don't have a working, ready-to-sell system in the agreed time, I refund you. No questions asked.</span>
+          <strong data-es>Sin riesgo.</strong>
+          <span data-en> If in 7 days you're not fully ready to accept clients, we keep working for free until it's done.</span>
+          <span data-es> Si en 7 días no tienes todo listo para aceptar clientes, seguimos trabajando gratis hasta completarlo.</span>
         </div>
         <a href="#" class="btn-block">
-          <span data-es>Reservar mi lugar ahora →</span>
           <span data-en>Book my spot now →</span>
+          <span data-es>Reservar mi lugar ahora →</span>
         </a>
       </div>
       <div class="price-why">
         <div class="why-item">
-          <div class="why-title"><span data-es>¿Por qué $997?</span><span data-en>Why $997?</span></div>
+          <div class="why-title"><span data-en>Why $997?</span><span data-es>¿Por qué $997?</span></div>
           <div class="why-desc">
-            <span data-es>Porque hacerlo bien — desde la landing hasta los emails automáticos — toma entre 25 y 40 horas de trabajo real. Un freelancer en Fiverr cobra eso en partes desconectadas sin garantía de que funcione junto.</span>
-            <span data-en>Because doing this right — from the landing page to automated emails — takes 25 to 40 hours of real work. A Fiverr freelancer charges that in disconnected pieces with no guarantee they work together.</span>
+            <span data-en>Done right — landing page, payments, delivery, and email automations — this takes 25 to 40 hours of real work. A Fiverr freelancer charges similar in disconnected pieces, with no guarantee everything works together on day 1.</span>
+            <span data-es>Hacerlo bien — landing, pagos, entrega y automatizaciones — toma entre 25 y 40 horas reales. Un freelancer en Fiverr cobra similar en partes desconectadas, sin garantía de que todo funcione junto el día 1.</span>
           </div>
         </div>
         <div class="why-item">
-          <div class="why-title"><span data-es>Lo que obtienes a cambio</span><span data-en>What you get in return</span></div>
+          <div class="why-title"><span data-en>What you actually get</span><span data-es>Lo que realmente obtienes</span></div>
           <div class="why-desc">
-            <span data-es>Un sistema completo que funciona el día 1. No un prototipo. No algo que "casi está". Todo probado, entregado, y con alguien que te enseña a usarlo.</span>
-            <span data-en>A complete system that works on day 1. Not a prototype. Not something that "almost works." Everything tested, delivered, with someone who shows you how to use it.</span>
+            <span data-en>A complete, working system on day 1. Not a prototype. Not "almost done." Tested, delivered, and with someone who shows you how to use it.</span>
+            <span data-es>Un sistema completo y funcionando el día 1. No un prototipo. No algo "casi listo". Probado, entregado, y con alguien que te enseña a usarlo.</span>
           </div>
         </div>
         <div class="why-item">
-          <div class="why-title"><span data-es>¿Qué necesito de ti?</span><span data-en>What I need from you</span></div>
+          <div class="why-title"><span data-en>What I need from you</span><span data-es>Lo que necesito de ti</span></div>
           <div class="why-desc">
-            <span data-es>Tu producto listo (o casi). El precio de venta. Una idea de a quién va dirigido. Con eso arrancamos el mismo día que pagas.</span>
-            <span data-en>Your product ready (or nearly). The sale price. A sense of who it's for. With that we start the same day you pay.</span>
+            <span data-en>Your program ready (or nearly). A price. An idea of who it's for. That's it. We start the same day you pay.</span>
+            <span data-es>Tu programa listo (o casi). Un precio. Una idea de a quién va dirigido. Eso es todo. Arrancamos el mismo día que pagas.</span>
           </div>
         </div>
         <div class="why-item">
-          <div class="why-title"><span data-es>Lugares limitados</span><span data-en>Limited spots</span></div>
+          <div class="why-title"><span data-en>Limited spots</span><span data-es>Lugares limitados</span></div>
           <div class="why-desc">
-            <span data-es>Trabajo con pocos clientes a la vez para garantizar los tiempos de entrega. Cuando hay lista de espera, el próximo lanzamiento tarda 2–3 semanas más.</span>
-            <span data-en>I work with few clients at a time to guarantee delivery timelines. When there's a waitlist, the next launch takes 2–3 more weeks.</span>
+            <span data-en>I work with a small number of clients at a time to guarantee the 7-day delivery. When there's a waitlist, the next launch takes 2–3 weeks longer.</span>
+            <span data-es>Trabajo con pocos clientes a la vez para garantizar la entrega en 7 días. Cuando hay lista de espera, el próximo lanzamiento tarda 2–3 semanas más.</span>
           </div>
         </div>
       </div>
@@ -853,67 +894,63 @@ footer small { font-size: 0.75rem; color: var(--dim); }
   <div class="wrap">
     <div class="section-eyebrow">FAQ</div>
     <h2 class="section-h2">
-      <span data-es>Lo que me suelen preguntar.</span>
-      <span data-en>What people usually ask.</span>
+      <span data-en>Questions people ask before booking.</span>
+      <span data-es>Preguntas que hacen antes de contratar.</span>
     </h2>
-    <p class="section-lead">
-      <span data-es>Si tienes algo más, escríbeme directo.</span>
-      <span data-en>If you have something else, write me directly.</span>
-    </p>
     <div class="faq-stack">
       <div class="faq-item">
         <button class="faq-btn" onclick="faqToggle(this)">
+          <span data-en>What do I need to have ready before hiring you?</span>
           <span data-es>¿Qué necesito tener listo antes de contratarte?</span>
-          <span data-en>What do I need ready before hiring you?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-body">
-          <span data-es>Tu producto terminado (o casi). El precio al que lo vas a vender. Una idea básica de a quién va dirigido. Con eso puedo arrancar. No necesito que seas técnico ni que sepas de diseño.</span>
-          <span data-en>Your product finished (or nearly). The price you'll sell it at. A basic idea of who it's for. That's enough for me to start. You don't need to be technical or know anything about design.</span>
+          <span data-en>Your program finished (or nearly). The price you'll sell it at. A basic idea of who your ideal client is. That's all I need to get started. You don't need to be technical or know anything about design.</span>
+          <span data-es>Tu programa terminado (o casi). El precio al que lo vas a vender. Una idea básica de quién es tu cliente ideal. Con eso puedo arrancar. No necesitas saber nada de tecnología ni de diseño.</span>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-btn" onclick="faqToggle(this)">
-          <span data-es>¿Qué pasa si no tengo cuenta de Stripe?</span>
-          <span data-en>What if I don't have a Stripe account?</span>
+          <span data-en>What if I don't have a Stripe account yet?</span>
+          <span data-es>¿Qué pasa si aún no tengo cuenta de Stripe?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-body">
-          <span data-es>Te guío paso a paso. Crear una cuenta Stripe es gratis y toma menos de 20 minutos. Solo necesitas una cuenta bancaria y tu identificación. Yo me encargo de todo lo técnico una vez que la tengas activa.</span>
-          <span data-en>I'll guide you step by step. Creating a Stripe account is free and takes less than 20 minutes. You just need a bank account and ID. I handle all the technical setup once yours is active.</span>
+          <span data-en>I'll guide you step by step. Creating a Stripe account is free and takes less than 20 minutes — you just need a bank account and ID. I handle all the technical integration once it's active.</span>
+          <span data-es>Te guío paso a paso. Crear una cuenta Stripe es gratis y toma menos de 20 minutos — solo necesitas una cuenta bancaria y tu identificación. Yo me encargo de toda la integración técnica una vez que esté activa.</span>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-btn" onclick="faqToggle(this)">
-          <span data-es>¿Qué tipo de productos funcionan con esto?</span>
-          <span data-en>What types of products work with this?</span>
+          <span data-en>What types of programs work with this?</span>
+          <span data-es>¿Qué tipo de programas funcionan con esto?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-body">
-          <span data-es>Cursos, templates, ebooks, mentorías, comunidades, sesiones 1:1, software de descarga. Cualquier producto digital con precio fijo y entrega clara. Si tienes dudas sobre tu caso, escríbeme antes de contratar.</span>
-          <span data-en>Courses, templates, ebooks, mentorships, communities, 1:1 sessions, downloadable software. Any digital product with a fixed price and clear delivery. If you're unsure about your case, write me before purchasing.</span>
+          <span data-en>Online courses, group programs, 1:1 coaching packages, memberships, digital downloads, mentorships, or any packaged service with a fixed price and clear delivery. If you're unsure about your specific case, write me before booking.</span>
+          <span data-es>Cursos online, programas grupales, paquetes de coaching 1:1, membresías, descargas digitales, mentorías o cualquier servicio empaquetado con precio fijo y entrega clara. Si tienes dudas sobre tu caso, escríbeme antes de contratar.</span>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-btn" onclick="faqToggle(this)">
-          <span data-es>¿Los 7–10 días son garantizados?</span>
-          <span data-en>Are the 7–10 days guaranteed?</span>
+          <span data-en>Is the 7-day delivery guaranteed?</span>
+          <span data-es>¿Los 7 días de entrega son garantizados?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-body">
-          <span data-es>Sí, siempre que me entregues el material necesario dentro de las primeras 24–48h. Si tu parte se demora, el plazo se ajusta. Lo que garantizo: si no tienes un sistema funcionando en el tiempo acordado, te devuelvo el dinero.</span>
-          <span data-en>Yes, as long as you deliver the necessary materials within the first 24–48 hours. If your side is delayed, the timeline adjusts. What I guarantee: if you don't have a working system in the agreed time, you get a full refund.</span>
+          <span data-en>Yes — as long as you send me the materials I need (your copy, images, product access) within the first 24–48 hours. If there's a delay on your end, the timeline adjusts accordingly. Our guarantee: if in 7 days you're not fully ready to accept clients, we keep working for free until it's done.</span>
+          <span data-es>Sí — siempre que me envíes los materiales que necesito (tu copy, imágenes, acceso al producto) dentro de las primeras 24–48 horas. Si hay retraso de tu parte, el plazo se ajusta. Nuestra garantía: si en 7 días no tienes todo listo para aceptar clientes, seguimos trabajando gratis hasta completarlo.</span>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-btn" onclick="faqToggle(this)">
-          <span data-es>¿Puedo pedir cambios después de la entrega?</span>
           <span data-en>Can I request changes after delivery?</span>
+          <span data-es>¿Puedo pedir cambios después de la entrega?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-body">
-          <span data-es>Sí. Los 14 días de soporte cubren ajustes menores: textos, precios, colores, una sección corta. Rediseños completos o nuevas funcionalidades tienen costo adicional.</span>
-          <span data-en>Yes. The 14 days of support cover minor tweaks: text, prices, colors, a short section. Full redesigns or new features have an additional cost.</span>
+          <span data-en>Yes. The 14 days of post-delivery support cover minor tweaks: text updates, price changes, color adjustments, a short new section. Full redesigns or new features are scoped and quoted separately.</span>
+          <span data-es>Sí. Los 14 días de soporte post-entrega cubren ajustes menores: cambios de texto, precio, colores, una sección corta nueva. Rediseños completos o nuevas funcionalidades se presupuestan por separado.</span>
         </div>
       </div>
     </div>
@@ -924,20 +961,20 @@ footer small { font-size: 0.75rem; color: var(--dim); }
 <div class="final-cta reveal">
   <div class="cta-glow" aria-hidden="true"></div>
   <h2>
-    <span data-es>Tu producto puede estar<br>vendiendo <em>la próxima semana.</em></span>
-    <span data-en>Your product could be<br>selling <em>next week.</em></span>
+    <span data-en>Stop delaying your launch.<br><em>You can be live in 7 days.</em></span>
+    <span data-es>Deja de posponer tu lanzamiento.<br><em>Puedes estar en vivo en 7 días.</em></span>
   </h2>
   <p>
-    <span data-es>Pocos lugares disponibles. El próximo cliente que espere empieza en 2–3 semanas.</span>
-    <span data-en>Few spots available. The next client who waits starts in 2–3 weeks.</span>
+    <span data-en>Limited spots. The next client on the waitlist starts 2–3 weeks later.</span>
+    <span data-es>Lugares limitados. El próximo cliente en espera empieza 2–3 semanas después.</span>
   </p>
-  <a href="#precio" class="btn-primary">
-    <span data-es>Reservar mi lugar →</span>
-    <span data-en>Book my spot →</span>
+  <a href="#pricing" class="btn-primary">
+    <span data-en>Book my spot now →</span>
+    <span data-es>Reservar mi lugar ahora →</span>
   </a>
   <p class="cta-fn">
-    <span data-es>Pago único · Sin suscripciones · Garantía de devolución</span>
-    <span data-en>One-time payment · No subscriptions · Money-back guarantee</span>
+    <span data-en>One-time payment · No subscriptions · We work for free until it's done</span>
+    <span data-es>Pago único · Sin suscripciones · Trabajamos gratis hasta completarlo</span>
   </p>
 </div>
 
@@ -948,26 +985,19 @@ footer small { font-size: 0.75rem; color: var(--dim); }
 </footer>
 
 <script>
-  // ── Lang switcher ──────────────────────────────
   function setLang(lang) {
     document.body.className = 'lang-' + lang;
     document.getElementById('btn-es').classList.toggle('active', lang === 'es');
     document.getElementById('btn-en').classList.toggle('active', lang === 'en');
   }
-
-  // ── FAQ ────────────────────────────────────────
   function faqToggle(btn) {
     const item = btn.closest('.faq-item');
     const isOpen = item.classList.contains('open');
     document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
     if (!isOpen) item.classList.add('open');
   }
-
-  // ── Scroll reveal ──────────────────────────────
   const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-    });
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.07 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
